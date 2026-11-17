@@ -85,6 +85,7 @@ export function Home() {
 
         <AppointmentList
           appointments={appointmentsForDate}
+          selectedDate={selectedDate}
           onCancel={handleCancelAppointment}
         />
       </div>

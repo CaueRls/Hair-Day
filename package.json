@@ -23,5 +23,9 @@
     "tailwindcss": "^4.3.5",
     "typescript": "~7.0.2",
     "vite": "^8.3.6"
+  },
+  "optionalDependencies": {
+    "@oxlint/binding-win32-x64-msvc": "^1.93.0",
+    "@rolldown/binding-win32-x64-msvc": "^1.2.19"
   }
 }

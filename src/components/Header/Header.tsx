@@ -1,17 +1,18 @@
-interface HeaderProps {
-  title?: string
-}
-
-export function Header({ title = 'HairDay' }: HeaderProps) {
+export function Header() {
   return (
-    <header className="mb-8 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-      <div>
-        <h1 className="text-3xl font-bold tracking-tight text-[#f5f4f5] sm:text-4xl">
-          {title}
-        </h1>
-        <p className="mt-1 text-sm text-[#b2afb6]">
-          Agende e gerencie horários de forma simples.
-        </p>
+    <header className="mb-8 flex items-center justify-between">
+      <div className="flex items-center gap-3">
+        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#b8952e] text-lg font-bold text-[#19181b]">
+          HD
+        </div>
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#b8952e]">
+            Hair Day
+          </p>
+          <h1 className="text-xl font-bold leading-tight text-[#f5f4f5] sm:text-2xl">
+            Plataforma de agendamento
+          </h1>
+        </div>
       </div>
     </header>
   )
