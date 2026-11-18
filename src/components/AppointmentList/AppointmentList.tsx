@@ -41,15 +41,15 @@ export function AppointmentList({ appointments, selectedDate, onCancel }: Appoin
 
   return (
     <section className="flex min-w-0 flex-1 flex-col gap-4">
-      <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
+      <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <h2 className="text-xl font-semibold text-[#f5f4f5]">Sua agenda</h2>
-          <p className="text-sm text-[#b2afb6]">
+          <h2 className="text-xl font-semibold text-[#f6eaff] [text-shadow:0_0_10px_rgba(168,85,247,0.22)]">Sua agenda</h2>
+          <p className="text-sm text-[#bfa9d8]">
             Consulte os seus cortes de cabelo agendados por dia.
           </p>
         </div>
         {selectedDate ? (
-          <p className="rounded-full border border-[#3a383d] bg-[#232225] px-3 py-1 text-sm font-medium capitalize text-[#d6d4d9]">
+          <p className="rounded-full border border-[#ff8a1c]/40 bg-[#1b102e] px-3 py-1 text-sm font-medium capitalize text-[#ffe4c7] shadow-[0_0_10px_rgba(255,138,28,0.12)]">
             {formatSelectedDate(selectedDate)}
           </p>
         ) : null}
@@ -64,19 +64,19 @@ export function AppointmentList({ appointments, selectedDate, onCancel }: Appoin
           return (
             <div
               key={period.key}
-              className="overflow-hidden rounded-2xl border border-[#2e2c30] bg-[#1f1e21]"
+              className="overflow-hidden rounded-2xl border border-[#4a256f] bg-[#140b22]/90 shadow-[0_0_18px_rgba(168,85,247,0.08)]"
             >
-              <div className="flex items-center justify-between border-b border-[#2e2c30] px-4 py-3">
-                <h3 className="flex items-center gap-2 text-sm font-semibold text-[#f5f4f5]">
-                  <span aria-hidden>{period.icon}</span>
+              <div className="flex items-center justify-between border-b border-[#4a256f] bg-gradient-to-r from-[#1b102e] via-[#1a0f2b] to-[#1b102e] px-4 py-3">
+                <h3 className="flex items-center gap-2 text-sm font-semibold text-[#f6eaff]">
+                  <span aria-hidden className="[filter:drop-shadow(0_0_6px_rgba(255,138,28,0.35))]">{period.icon}</span>
                   {period.label}
                 </h3>
-                <span className="text-xs font-medium text-[#8c8991]">{period.range}</span>
+                <span className="text-xs font-medium text-[#d29cff]">{period.range}</span>
               </div>
 
               <div className="p-4">
                 {items.length === 0 ? (
-                  <p className="py-2 text-center text-sm text-[#6f6c75]">
+                  <p className="py-2 text-center text-sm text-[#9b86b8]">
                     Nenhum agendamento neste período
                   </p>
                 ) : (
